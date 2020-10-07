@@ -1,10 +1,17 @@
-#logo {
+@import '../../variables';
+
+.wrap-intro {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg;
+}
+
+#logo {
   width: 523px;
-  animation: fill 0.5s ease forwards 2.6s, move 0.7s ease forwards 3.1s;
+  animation: fill 0.8s ease forwards 2.6s, move 0.7s ease forwards 3.4s;
 }
 
 #logo path:nth-child(1) {
@@ -82,17 +89,8 @@
 @keyframes fill {
   from {
     fill: transparent;
-    filter: none;
   }
   to {
     fill: white;
-    filter: drop-shadow(1px 1px 2px #fff);
-  }
-}
-
-@keyframes move {
-  to {
-    top: 8%;
-    width: 200px;
   }
 }
