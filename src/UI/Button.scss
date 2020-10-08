@@ -1,0 +1,31 @@
+@import '../variables';
+
+.btn {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid $accent;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: $accent;
+  cursor: pointer;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  margin-left: 5px;
+  transition: 0.2s;
+  opacity: 0;
+  animation: opacity 0.4s ease forwards 1.5s;
+  &:hover {
+    background-color: darken($accent, 10);
+    color: #eee;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

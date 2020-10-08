@@ -1,6 +1,5 @@
 import React from 'react';
-import { CSSTransition } from 'react-transition-group';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import './App.scss';
 
@@ -11,8 +10,10 @@ import About from './pages/About/About';
 import Skills from './pages/Skills/Skills';
 import Work from './pages/Work/Work';
 import Contact from './pages/Contact/Contact';
+import Error from './pages/Error/Error';
 
 function App() {
+  const [show, setShow] = React.useState(false);
   const routes = [
     { path: '/', Component: Home },
     { path: '/about', Component: About },
@@ -21,21 +22,28 @@ function App() {
     { path: '/contact', Component: Contact },
   ];
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      setShow(true);
+    }, 3000);
+  }, []);
+
   return (
     <div className="App">
-      <div className="wrap">
-        <Intro />
-        <Siderbar />
-        {routes.map(({ path, Component }) => (
-          <Route key={path} path={path} exact>
-            {({ match }) => (
-              <CSSTransition timeout={1000} classNames="page" unmountOnExit in={match != null}>
+      <Intro />
+      {show && (
+        <div className="wrap">
+          <Siderbar />
+          <Switch>
+            {routes.map(({ path, Component }) => (
+              <Route key={path} path={path} exact>
                 <Component />
-              </CSSTransition>
-            )}
-          </Route>
-        ))}
-      </div>
+              </Route>
+            ))}
+            <Route path="*" component={Error} />
+          </Switch>
+        </div>
+      )}
     </div>
   );
 }

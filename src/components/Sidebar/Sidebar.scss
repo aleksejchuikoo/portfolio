@@ -13,8 +13,18 @@
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(-100%);
-  border-right: 1px solid rgba(255, 255, 255, 0.04);
-  animation: translate 1s ease forwards 3.8s;
+  border-right: 1px solid $line-sidebar;
+  animation: translate 1s ease forwards 0.5s;
+}
+
+.logo {
+  padding: 20px 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid $line-sidebar;
+  transition: 0.2s;
+  &:hover {
+    background-color: rgb(27, 27, 27);
+  }
 }
 
 .nav,
@@ -36,7 +46,7 @@
     text-transform: uppercase;
     font-size: 14px;
     color: #ccc;
-    &.active {
+    &-active {
       color: $accent;
     }
     &:hover {
@@ -62,6 +72,11 @@
       }
     }
   }
+}
+
+.nav__link-active,
+.nav__link:hover {
+  text-shadow: 0 0 20px $accent;
 }
 
 .contacts {
