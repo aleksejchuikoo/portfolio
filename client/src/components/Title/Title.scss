@@ -1,0 +1,58 @@
+@import '../../variables';
+
+.title {
+  font-size: 70px;
+  font-family: $font;
+  line-height: 70px;
+  color: $accent;
+  margin: 0 0 40px -25px;
+
+  text-shadow: 0 0 150px $accent;
+  position: relative;
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: $accent;
+    filter: blur(150px);
+  }
+
+  span {
+    position: relative;
+    opacity: 0;
+    top: 0;
+    animation: fade-in-symbol 0.3s forwards;
+    cursor: default;
+    transition: 0.2s ease-out;
+  }
+
+  span:hover {
+    top: -5px;
+  }
+}
+
+@for $i from 1 through 5 {
+  .title span:nth-child(#{$i}) {
+    animation: fade-in-symbol 0.2s ease forwards #{$i * 0.1}s;
+  }
+}
+
+@for $i from 7 through 8 {
+  .title span:nth-child(#{$i}) {
+    animation: fade-in-symbol 0.2s ease forwards #{$i * 0.1}s;
+  }
+}
+
+@keyframes fade-in-symbol {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

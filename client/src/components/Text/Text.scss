@@ -1,0 +1,17 @@
+@import '../../variables';
+
+.text {
+  margin-left: -25px;
+  font-family: serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  transform: scale(0);
+  transform-origin: center center;
+  animation: showText 0.5s ease forwards 0.8s;
+}
+
+@keyframes showText {
+  to {
+    transform: scale(1);
+  }
+}

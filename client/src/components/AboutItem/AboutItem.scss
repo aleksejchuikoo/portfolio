@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.about__item {
+  display: flex;
+  align-items: center;
+  margin-left: -25px;
+  margin-bottom: 30px;
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: $grey;
+    position: relative;
+    margin-right: 30px;
+
+    .about-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: 20px;
+      transform: translate(50%, 50%);
+      color: $accent;
+    }
+  }
+}
