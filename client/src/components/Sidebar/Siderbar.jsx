@@ -11,7 +11,7 @@ const Siderbar = () => {
     { to: '/', name: 'home', icon: 'fas fa-home nav__link-icon' },
     { to: '/about', name: 'about', icon: 'fas fa-address-card nav__link-icon' },
     { to: '/skills', name: 'skills', icon: 'fas fa-cogs nav__link-icon' },
-    { to: '/work', name: 'work', icon: 'fas fa-eye nav__link-icon' },
+    { to: '/work', name: 'works', icon: 'fas fa-eye nav__link-icon' },
     { to: '/contact', name: 'contact', icon: 'fas fa-envelope nav__link-icon' },
   ];
 

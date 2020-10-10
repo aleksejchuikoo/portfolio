@@ -18,6 +18,14 @@
   animation: bg 0.8s forwards;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

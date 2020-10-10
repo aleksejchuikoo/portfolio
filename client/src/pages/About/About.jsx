@@ -1,7 +1,8 @@
 import React from 'react';
-import AboutItem from '../../components/AboutItem/AboutItem';
-import Text from '../../components/Text/Text';
+
 import Title from '../../components/Title/Title';
+import Text from '../../components/Text/Text';
+import AboutItem from '../../components/AboutItem/AboutItem';
 
 import './About.scss';
 
@@ -34,14 +35,21 @@ function About() {
       <div className="wrapper-left">
         <div className="wrapper-info">
           <Title>About me</Title>
-          <ul className="about__items">
-            {aboutItems.map((item, index) => (
-              <AboutItem {...item} key={index} />
-            ))}
-          </ul>
+          <Text title>
+            I enjoy taking complex problems and turning them into simple and beautiful interface
+            designs. I also love the logic and structure of coding and always strive to write
+            elegane and efficient code. When I'm not coding, you'll find me in the gym or or reading
+            a book.
+          </Text>
         </div>
       </div>
-      <div className="wrapper-right"></div>
+      <div className="wrapper-right">
+        <div className="wrapper-info">
+          {aboutItems.map((item, index) => (
+            <AboutItem {...item} key={index} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

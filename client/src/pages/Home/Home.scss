@@ -19,6 +19,7 @@
   height: 100%;
   display: flex;
   padding-left: 40px;
+  padding-right: 20px;
   &-left,
   &-right {
     display: flex;
@@ -60,19 +61,19 @@
 }
 
 @for $i from 1 through 3 {
-  .wrapper-left span:nth-child(#{$i * 2 - 1}) {
+  .wrapper-left .home-title span:nth-child(#{$i * 2 - 1}) {
     animation: translate-left 0.4s ease forwards;
   }
 }
 
 @for $i from 1 through 3 {
-  .wrapper-left span:nth-child(#{$i * 2}) {
+  .wrapper-left .home-title span:nth-child(#{$i * 2}) {
     animation: translate-right 0.4s ease forwards;
   }
 }
 
 @for $i from 1 through 3 {
-  .wrapper-left span:nth-child(#{$i}) {
+  .wrapper-left .home-title span:nth-child(#{$i}) {
     animation-delay: #{$i * 0.3}s;
   }
 }
