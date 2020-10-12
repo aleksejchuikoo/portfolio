@@ -4,7 +4,7 @@ import './Text.scss';
 function Text({ children, title, center }) {
   const textTitle = (
     <div className="text-title">
-      I'm <span>Aleksej Chuiko</span>and I'm a Fullstack Developer from Minsk, Belarus.
+      I'm <span>Aleksej Chuiko</span>and I'm a Fullstack JavaScript Developer from Minsk, Belarus.
     </div>
   );
 

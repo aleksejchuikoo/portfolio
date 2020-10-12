@@ -39,7 +39,7 @@
   width: 15px;
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through 20 {
   .title span:nth-child(#{$i}) {
     animation: fade-in-symbol 0.2s ease forwards #{$i * 0.1 + 0.2}s;
   }

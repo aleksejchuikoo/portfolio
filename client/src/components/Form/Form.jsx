@@ -19,7 +19,7 @@ function Form() {
   };
 
   return (
-    <form className="contact-form">
+    <form className="contact-form" autoComplete="off">
       <div className="form-row form-group">
         <div className="form-input">
           <input name="name" type="text" placeholder="Name" ref={ref} required />
@@ -42,8 +42,8 @@ function Form() {
           cols="20"
           rows="5"
           placeholder="Message"
-          onFocus={() => handleFocus()}
-          onBlur={() => handleBlur()}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           required
         />
         <span className={border ? 'active' : null} />

@@ -43,7 +43,7 @@ function About() {
           </Text>
         </div>
       </div>
-      <div className="wrapper-right">
+      <div className="wrapper-right" style={{paddingRight: 20}}>
         <div className="wrapper-info">
           {aboutItems.map((item, index) => (
             <AboutItem {...item} key={index} />
